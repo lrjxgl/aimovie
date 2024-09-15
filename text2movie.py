@@ -27,7 +27,11 @@ def text2movie(prompt,bgmusic=[]):
        
         pattern = r"画面[^：]*：(.*?)旁白："
         senceList = re.findall(pattern, content, re.I | re.S)
-        
+        duibaiList2=[]
+        for v in duibaiList:
+            if v!='':
+                duibaiList2.append(v)
+        duibaiList=duibaiList2        
 
         # 检查两个匹配结果的长度是否相同，如果不同或者为0，返回错误信息
         if len(senceList) != len(duibaiList) or len(senceList) == 0:
@@ -78,7 +82,7 @@ def text2movie(prompt,bgmusic=[]):
     mp4url= unionvideo(videoList,audioList,bgmusic)  
     print(mp4url)
     print("视频合成成功")  
-      
+    return mp4url  
    
 
       
