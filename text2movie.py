@@ -138,8 +138,9 @@ def unionvideo(videoList,audioList,bgmusic=[]):
 
 if __name__ == "__main__":
 
-    #bgmusic=['output/bg.mp3']   
-    result=text2movie("帮我写一个有关七夕织女牛郎题材的短视频脚本，含3个场景，每个场景有一个详细的画面和旁白。")   
+    #bgmusic=['output/bg.mp3']  
+    prompt= "帮我写一个有关七夕织女牛郎题材的短视频脚本，含3个场景，每个场景有一个详细的画面和旁白。"
+    result=text2movie(prompt)   
     print(result)
 
 
