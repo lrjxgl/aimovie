@@ -13,6 +13,6 @@ dashscope_config={
 }
 apiFrom={
     "text2text":"zhipu",
-    "text2video":"searchvideo",
+    "text2video":"zhipu",
     "tts":"tts_sambert"
 }
