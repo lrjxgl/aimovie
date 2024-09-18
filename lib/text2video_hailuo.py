@@ -1,13 +1,13 @@
 import json
- 
+import baseconfig
 import time
 import requests
 from datetime import datetime
 import os
-from baseconfig import hailuo_api_key
+from baseconfig import hailuo_config
 def createTask(prompt='',imgurl=''):
     url = "https://api.minimax.chat/v1/video_generation"
-    api_key=hailuo_api_key
+    api_key=hailuo_config["api_key"]
 
     payload = json.dumps({
         "model": "video-01", 
@@ -26,7 +26,7 @@ def createTask(prompt='',imgurl=''):
     return res["task_id"]
 
 def checkTask(id):
-    api_key=hailuo_api_key
+    api_key=hailuo_config["api_key"]
     while(True):
        
         task_id=id
@@ -60,7 +60,7 @@ def checkTask(id):
 
 def download(file_id):
     # 发起 GET 请求获取视频数据
-    api_key=hailuo_api_key
+    api_key=hailuo_config["api_key"]
     url = "https://api.minimax.chat/v1/files/retrieve?file_id="+file_id
     headers = {
         'authorization': 'Bearer '+api_key,

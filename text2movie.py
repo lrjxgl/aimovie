@@ -8,8 +8,8 @@ from moviepy.editor import *
  
 from datetime import datetime 
 from lib.chat_zhipu import chat
-from lib.text2video_zhipu import text2video
-from lib.tts_sambert import tts
+from lib.searchvideo import text2video
+from lib.tts_hailuo import tts
  
  
  
